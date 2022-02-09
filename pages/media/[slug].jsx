@@ -7,9 +7,11 @@ import { GET_PRODUCT } from '~/server/queries';
 import Video from '~/components/partials/media/video';
 import BuyForm from '~/components/partials/media/BuyForm';
 import Sidebar from '~/components/partials/media/Sidebar';
-import InfoOne from '~/components/partials/product/info-tabs/info-one';
+import InfoOne from '~/components/partials/media/info-one';
 
 import Breadcrumb from '~/components/partials/media/breadcrumb';
+import Question from '~/components/Question';
+import RelateServices from '~/components/partials/media/relateservice';
 
 
 function Media () {
@@ -56,7 +58,9 @@ function Media () {
                                     </div>
                                 </div>
                             </div>
+                            <RelateServices title={title} current={mediaProduct} />
                             <InfoOne />
+                            <Question position={title} subname={current} />
                         </div>
                         <div className="col-lg-3 skeleton-body">
                              <StickyBox className={ `sticky-content skel-pro-single}` } offsetTop={ 70 }>

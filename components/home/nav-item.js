@@ -16,8 +16,7 @@ const NavItem = (props) =>  {
         <div className="col-md-6">
             <ul>
                 {
-                    console.log(path),
-                    content.slice(0, 5).map(item => <li className={ ( path.indexOf( `media/` ) > -1 && query.slug === `${title} ${item}`) ? "active" : '' }><ALink href={"/media/"+ title + " "+ item} scroll={ false }>{item}</ALink></li>)
+                    content.slice(0, 5).map((item,idx) => <li key={idx} className={ ( path.indexOf( `media/` ) > -1 && query.slug === `${title} ${item}`) ? "active" : '' }><ALink href={"/media/"+ title + " "+ item} scroll={ false }>{item}</ALink></li>)
                 }
             </ul>
         </div>
@@ -25,7 +24,7 @@ const NavItem = (props) =>  {
         <div className="col-md-6">
             <ul>
                 {
-                    content.slice(5, content.length).map(item => <li className={ ( path.indexOf( `media/` ) > -1 && query.slug === `${title} ${item}`) ? "active" : '' }><ALink href={"/media/"+ title + " "+ item} scroll={ false }>{item}</ALink></li>)
+                    content.slice(5, content.length).map((item,idx) => <li key={idx} className={ ( path.indexOf( `media/` ) > -1 && query.slug === `${title} ${item}`) ? "active" : '' }><ALink href={"/media/"+ title + " "+ item} scroll={ false }>{item}</ALink></li>)
                 }
             </ul>
             
@@ -33,7 +32,7 @@ const NavItem = (props) =>  {
     </div>
 
     const oneColumn = <ul>
-            {content.map(item => <li className={ ( path.indexOf( `media/` ) > -1 && query.slug === `${title} ${item}`) ? "active" : '' }><ALink href={"/media/"+ title + " "+ item} scroll={ false }>{item}</ALink></li>)}
+            {content.map((item,idx) => <li key={idx} className={ ( path.indexOf( `media/` ) > -1 && query.slug === `${title} ${item}`) ? "active" : '' }><ALink href={"/media/"+ title + " "+ item} scroll={ false }>{item}</ALink></li>)}
         </ul>
 
     return(
@@ -45,7 +44,7 @@ const NavItem = (props) =>  {
                     <div className="row no-gutters">
                         <div className="col-md-8">
                             <div className="menu-col">
-                                {twoColumns}                
+                                {twoColumns}            
                             </div>
                         </div>
                     </div>

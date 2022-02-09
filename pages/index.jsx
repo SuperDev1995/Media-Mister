@@ -36,7 +36,6 @@ function Home () {
         <div className={ `main home-page skeleton-body skel-shop-products ${loading ? '' : 'loaded'}` }>
             <div className="mb-2"></div>
             <div className="container">
-                <hr className="mb-4" />
                 <div className="row">
                     <div className="col-12">
                         <div className="banner banner-big">
@@ -214,7 +213,7 @@ function Home () {
                 </div>
             </div>
 
-            <Question position="home" />            
+            <Question position="home" subname="home"/>            
 
         </div>
     )

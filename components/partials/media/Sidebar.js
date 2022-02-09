@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
-import ALink from '~/components/features/alink';
-import RelatedProductsTwo from '~/components/partials/product/related/related-two';
-import { Features } from '~/contents/features';
+import { Features, Package } from '~/contents/features';
 import FeatureCard from './FeatureCard';
 
 function ProductSidebar ( props ) {
@@ -59,7 +55,17 @@ function ProductSidebar ( props ) {
 
                 <div className="products">
                     {
-                        Features.map(item => <FeatureCard img={item["img"]} name={item["content"]} />)
+                        Features.map((item,idx) => <FeatureCard key={idx} img={item["img"]} name={item["content"]} />)
+                    }
+                </div>
+            </div>
+
+            <div className="widget widget-products">
+                <h4 className="widget-title mb-1">How To Buy A Package?</h4>
+
+                <div className="products">
+                    {
+                        Package.map((item,idx) => <FeatureCard key={idx} img={item["img"]} name={item["content"]} />)
                     }
                 </div>
             </div>

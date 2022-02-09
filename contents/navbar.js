@@ -53,7 +53,7 @@ export const navItems = {
         inNav: true
     },
     linkedin: {
-        title: "LinkedIn",
+        title: "linkedin",
         content: ["Followers", "Connections", "Recommendations", "Endorsements", "Employees", "Likes", "Comments",
                 "Shares"],
         isTwo: false,

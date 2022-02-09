@@ -386,7 +386,7 @@ function MainMenu() {
                     </div>
                 </li>
                 {
-                    navTitles.map(item => <NavItem name={item}/>)
+                    navTitles.map((item,idx) => <NavItem name={item} key={idx}/>)
                 }
             </ul>
         </nav>

@@ -24,76 +24,74 @@ function Footer () {
     }
 
     return (
+        <>
         <footer className="footer footer-dark">
             <div className="footer-middle">
                 <div className={ containerClass }>
                     <div className="row">
-                        <div className="col-sm-6 col-lg-3">
+                        <div className="col-sm-6">
                             <div className="widget widget-about">
                                 <ALink href="/">
                                     <img src="images/home/logo-footer.png" className="footer-logo" alt="Footer Logo" width="104" height="24" />
                                 </ALink>
-                                <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. </p>
+                                <p>Contact the Media Mister Team with any questions you have, or to discuss your requirements in more detail. </p>
+                                <br/>
+                                <p>Weekdays : 9 AM - 6 PM | Saturday : 9 AM - 1 PM</p>
 
-                                <div className="social-icons">
+                            </div>
+                        </div>
+
+                        <div className="col-sm-3">
+                            <div className="widget">
+                                <h4 className="widget-title">Quick Links</h4>
+
+                                <ul className="widget-list">
+                                    <li><ALink href="/">Home</ALink></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Affiliate Program</a></li>
+                                    <li><ALink href="#">Blog</ALink></li>
+                                    <li><ALink href="pages/contact">Contact</ALink></li>
+                                </ul>
+                            </div>
+                            
+                            <div className="social-icons">
                                     <a href="#" className="social-icon" title="Facebook" onClick={ e => { e.preventDefault(); } }><i className="icon-facebook-f"></i></a>
                                     <a href="#" className="social-icon" title="Twitter" onClick={ e => { e.preventDefault(); } }><i className="icon-twitter"></i></a>
-                                    <a href="#" className="social-icon" title="Instagram" onClick={ e => { e.preventDefault(); } }><i className="icon-instagram"></i></a>
-                                    <a href="#" className="social-icon" title="Youtube" onClick={ e => { e.preventDefault(); } }><i className="icon-youtube"></i></a>
                                     <a href="#" className="social-icon" title="Pinterest" onClick={ e => { e.preventDefault(); } }><i className="icon-pinterest"></i></a>
                                 </div>
-                            </div>
                         </div>
 
-                        <div className="col-sm-6 col-lg-3">
+                        <div className="col-sm-3">
                             <div className="widget">
-                                <h4 className="widget-title">Useful Links</h4>
+                                <h4 className="widget-title">Popular Services</h4>
 
                                 <ul className="widget-list">
-                                    <li><ALink href="/pages/about">About Molla</ALink></li>
-                                    <li><a href="#">How to shop on Molla</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><ALink href="/pages/contact">Contact us</ALink></li>
-                                    <li><ALink href="/pages/login">Log in</ALink></li>
+                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Buy YouTube Views</a></li>
+                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Buy YouTube Subscribers</a></li>
+                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Buy Instagram Followers</a></li>
+                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Buy Twitter Followers</a></li>
+                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Buy YouTube Likes</a></li>
+                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Buy Spotify Followers</a></li>
+                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Buy Spotify Plays</a></li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div className="col-sm-6 col-lg-3">
-                            <div className="widget">
-                                <h4 className="widget-title">Customer Service</h4>
-
-                                <ul className="widget-list">
-                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Payment Methods</a></li>
-                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Money-back guarantee!</a></li>
-                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Returns</a></li>
-                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Shipping</a></li>
-                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Terms and conditions</a></li>
-                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Privacy Policy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-6 col-lg-3">
-                            <div className="widget">
-                                <h4 className="widget-title">My Account</h4>
-
-                                <ul className="widget-list">
-                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Sign In</a></li>
-                                    <li><ALink href="/shop/cart">View Cart</ALink></li>
-                                    <li><ALink href="/shop/wishlist">My Wishlist</ALink></li>
-                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Track My Order</a></li>
-                                    <li><a href="#" onClick={ e => { e.preventDefault(); } }>Help</a></li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <div className="footer-bottom">
                 <div className={ containerClass }>
-                    <p className="footer-copyright">Copyright © { ( new Date() ).getFullYear() } Molla Store. All Rights Reserved.</p>
+                    <p className="footer-copyright">© 2012-{ ( new Date() ).getFullYear() } Media Mister.</p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p><a href='#'>Home</a> |&nbsp;
+                        <a href='#'>Affiliate Program</a> |&nbsp;
+                        <a href='#'>Contact</a> |&nbsp;
+                        <a href='#'>Terms of Services</a> |&nbsp;
+                        <a href='#'>Privacy Policy</a> |&nbsp;
+                        <a href='#'>Refund Policy</a>
+                    </p>
                     <figure className="footer-payments">
                         <img src="images/payments.png" alt="Payment methods" width="272" height="20" />
                     </figure>
@@ -105,6 +103,7 @@ function Footer () {
                     : ""
             }
         </footer>
+        </>
     );
 }
 

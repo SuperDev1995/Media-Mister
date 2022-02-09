@@ -7,6 +7,7 @@ const FeatureCard = (props) =>  {
                 <img
                     alt="Product"
                     className="product-image"
+                    src={img}
                 />
             </figure>
 

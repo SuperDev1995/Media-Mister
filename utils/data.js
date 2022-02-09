@@ -670,7 +670,7 @@ export const mainSlider7 = {
 
 export const mainSlider8 = {
     nav: false,
-    dots: false,
+    dots: true,
     margin: 20,
     loop: false,
     items: 2,
@@ -679,15 +679,15 @@ export const mainSlider8 = {
             items: 3
         },
         992: {
-            items: 4
+            items: 3
         },
         1200: {
-            items: 4,
-            dots: false
+            items: 3,
+            dots: true
         },
         1400: {
-            nav: true,
-            items: 4
+            nav: false,
+            items: 3
         }
     }
 }
