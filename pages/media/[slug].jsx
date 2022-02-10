@@ -39,7 +39,7 @@ function Media () {
                 <div className="container skeleton-body horizontal">
                     <div className="row">
                         <div className="col-lg-9">
-                            <div className="product-details-top">
+                            <div className="product-details-top mb-5">
                                 <div className={ "row skel-pro-single loaded" }>
                                     <div className="col-md-7">
                                         <Video />

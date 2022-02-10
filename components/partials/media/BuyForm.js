@@ -1,23 +1,22 @@
 import { connect } from "react-redux";
-import SelectBox from "~/components/partials/media/selectBox";
 import InputBoxes from "./InputBoxes";
 
-const BuyForm = (props) =>  {
-    const Ratings = props.ratings;
+const BuyForm = ({current, name, pName, ratings}) =>  {
+    const Ratings = ratings;
     return(
         <>
-        {console.log(props.pName), console.log(props.current)}
+        {console.log(pName), console.log(current)}
         <div className="product-details">
-            <h1 className="product-title" style={{textTransform: "capitalize"}}>{ props.name }</h1>
+            <h1 className="product-title" style={{textTransform: "capitalize"}}>{ name }</h1>
             <div className="ratings-container">
                 <div className="ratings">
-                    <div className="ratings-val" style={ { width: Ratings[props.pName][props.current] * 20 + '%' } }></div>
+                    <div className="ratings-val" style={ { width: Ratings[pName][current] * 20 + '%' } }></div>
                     
                 </div>
                 <span className="ratings-text">( 2 Reviews )</span>&nbsp;&nbsp;&nbsp;&nbsp;
                 <span className="product-price">$72.00</span>
             </div>
-            <InputBoxes key={props.pName}/>
+            <InputBoxes key={pName}/>
             <div className="product-details-action">
                 <a
                     href="#"

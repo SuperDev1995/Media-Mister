@@ -3,7 +3,7 @@ import ALink from "~/components/features/alink"
 const ServiceCard = ({title, service}) =>  {
     return (
         <>
-            <div className="text-center d-flex align-items-center flex-column justify-content-center">
+            <div className="text-center d-flex align-items-center flex-column justify-content-center" style={{width: "100%"}}>
                 <span className="icon-box-icon">
                     <i className="icon-info-circle"></i>
                 </span>

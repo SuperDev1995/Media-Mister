@@ -12,7 +12,7 @@ const Video = (props) =>    {
                             alt="poster"
                             width={500}
                             height={ 390 }
-                            src=""
+                            src="images/video/poster-1.jpg"
                             threshold={ 200 }
                             effect="opacity"
                         />

@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import ALink from '~/components/features/alink';
 import React, { useState, useEffect } from 'react';
+import Support from './support';
+import Payment from './payment';
 
 function Footer () {
     const router = useRouter( "" );
@@ -25,11 +27,15 @@ function Footer () {
 
     return (
         <>
+            <div className='container'>
+            <h2 className="title text-center mb-2">Excellent Customer Support</h2>
+            <Support />
+            </div>
         <footer className="footer footer-dark">
             <div className="footer-middle">
                 <div className={ containerClass }>
                     <div className="row">
-                        <div className="col-sm-6">
+                        <div className="col-sm-6 ">
                             <div className="widget widget-about">
                                 <ALink href="/">
                                     <img src="images/home/logo-footer.png" className="footer-logo" alt="Footer Logo" width="104" height="24" />
@@ -39,9 +45,19 @@ function Footer () {
                                 <p>Weekdays : 9 AM - 6 PM | Saturday : 9 AM - 1 PM</p>
 
                             </div>
+                            <div className="d-flex justify-content-between mb-3">
+                                <Payment img="stripe.png" />
+                                <Payment img="alipay.png" />
+                                <Payment img="paypal.png" />
+                                <Payment img="sofort.png" />
+                                <Payment img="debit.png" />
+                                <Payment img="bitcoin.png" />
+                                <Payment img="paysafe.png" />
+                                <Payment img="klarna.png" />
+                            </div>
                         </div>
 
-                        <div className="col-sm-3">
+                        <div className="col-sm-3  d-flex align-items-center justify-content-center flex-column mb-3">
                             <div className="widget">
                                 <h4 className="widget-title">Quick Links</h4>
 
@@ -54,14 +70,14 @@ function Footer () {
                                 </ul>
                             </div>
                             
-                            <div className="social-icons">
+                            <div className="social-icons d-flex justify-content-between">
                                     <a href="#" className="social-icon" title="Facebook" onClick={ e => { e.preventDefault(); } }><i className="icon-facebook-f"></i></a>
                                     <a href="#" className="social-icon" title="Twitter" onClick={ e => { e.preventDefault(); } }><i className="icon-twitter"></i></a>
                                     <a href="#" className="social-icon" title="Pinterest" onClick={ e => { e.preventDefault(); } }><i className="icon-pinterest"></i></a>
                                 </div>
                         </div>
 
-                        <div className="col-sm-3">
+                        <div className="col-sm-3  d-flex align-items-center justify-content-center flex-column">
                             <div className="widget">
                                 <h4 className="widget-title">Popular Services</h4>
 
@@ -84,7 +100,8 @@ function Footer () {
             <div className="footer-bottom">
                 <div className={ containerClass }>
                     <p className="footer-copyright">© 2012-{ ( new Date() ).getFullYear() } Media Mister.</p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <figure className="footer-payments">
+                        
                     <p><a href='#'>Home</a> |&nbsp;
                         <a href='#'>Affiliate Program</a> |&nbsp;
                         <a href='#'>Contact</a> |&nbsp;
@@ -92,8 +109,6 @@ function Footer () {
                         <a href='#'>Privacy Policy</a> |&nbsp;
                         <a href='#'>Refund Policy</a>
                     </p>
-                    <figure className="footer-payments">
-                        <img src="images/payments.png" alt="Payment methods" width="272" height="20" />
                     </figure>
                 </div>
             </div>

@@ -12,9 +12,9 @@ const RelateServices = ({
 
     return (
         <>
-        <h2 className="title text-center mb-4">Related Products</h2>
+        <h2 className="title text-center mb-5">Related Products</h2>
         {
-            <OwlCarousel adClass="owl-simple carousel-equal-height carousel-with-shadow cols-lg-4 cols-md-4 cols-xs-2 cols-1" isTheme={ false } options={ mainSlider8 }>
+            <OwlCarousel adClass="d-flext align-items-center owl-simple carousel-equal-height carousel-with-shadow cols-lg-4 cols-md-4 cols-xs-2 cols-1 mb-5" isTheme={ false } options={ mainSlider8 }>
                 
                 {
                     relateServices.map((service,idx) => <ServiceCard key={idx} title={title} service={service}/>)

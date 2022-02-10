@@ -20,7 +20,7 @@ function InfoOne ( props ) {
     return (
         <Tabs selectedTabClassName="show" selectedTabPanelClassName="active show">
             <div className="product-details-tab">
-                <TabList className="nav nav-pills justify-content-center">
+                <TabList className="nav nav-pills justify-content-between">
                     <Tab className="nav-item">
                         <span className="nav-link"> Description</span>
                     </Tab>

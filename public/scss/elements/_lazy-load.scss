@@ -1,11 +1,9 @@
 .lazy-load-image-background {
     position: relative;
-    width: 100%;
     z-index: -1;
 
-    img {
-        width: 100%;
-    }
+    // img {
+    // }
 
     &.product-image {
         position: static;
