@@ -48,7 +48,7 @@ export const navItems = {
     },
     discord:    {
         title: "discord",
-        content: ["Members"],
+        content: ["Members", "Direct Messages"],
         isTwo: false,
         inNav: true
     },
@@ -64,8 +64,183 @@ export const navItems = {
         content: ["Followers", "Views"],
         isTwo: false,
         inNav: false
+    },
+    Pinterest:{
+        title: "Pinterest",
+        content: ["Followers", "Repins", "Reactions"],
+        isTwo: false,
+        inNav: false
+    },
+    Podcast: {
+        title: "Podcast",
+        content: ["Listeners", "Downloads", "Subscribers"],
+        isTwo: false,
+        inNav: false
+    },
+    Rumble: {
+        title: "Rumble",
+        content: ["Views"],
+        isTwo: false,
+        inNav: false
+    },
+    Mixcloud: {
+        title: "Mixcloud",
+        content: ["Plays", "Followers"],
+        isTwo: false,
+        inNav: false
+    },
+    Soundcloud: {
+        title: "Soundcloud",
+        content: [
+          "Plays", "Followers", "Likes", "Comments", "Reposts"
+        ],
+        isTwo: false,
+        inNav: false
+    },
+    Vimeo: {
+        title: "Vimeo",
+        content: ["Views", "Followers", "Likes"],
+        isTwo: false,
+        inNav: false
+    },
+    Dailymotion: {
+        title: "Dailymotion",
+        content: ["Views"],
+        isTwo: false,
+        inNav: false
+    },
+    VK: {
+        title: "VK",
+        content: ["Friends", "Followers", "Members", "Likes", "Comments", "Shares"],
+        isTwo: false,
+        inNav: false
+    },
+    Website: {
+        title: "Website Traffic",
+        content: [
+            "Website Traffic"
+        ],
+        isTwo: false,
+        inNav: false
+    },
+    Tumblr: {
+        title: "Tumblr",
+        content: ["Followers", "Reblogs", "Likes"],
+        isTwo: false,
+        inNav: false
+    },
+    Telegram: {
+        title: "Telegram",
+        content: ["Members", "Post Views", "Votes", "Reactions"],
+        isTwo: false,
+        inNav: false
+    },
+    Shazam: {
+        title: "Shazam",
+        content: ["Plays", "Followers"],
+        isTwo: false,
+        inNav: false
+    },
+    Quora: {
+        title: "Quora",
+        content: ["Followers", "Upvotes", "Shares", "Comments", "Views", "Answers"],
+        isTwo: false,
+        inNav: false
+    },
+    Google: {
+        title: "Google",
+        content: ["My Business Reviews", "Play Reviews"],
+        isTwo: false,
+        inNav: false
+    },
+    iOS: {
+        title: "iOS",
+        content: ["App Reviews"],
+        isTwo: false,
+        inNav: false
+    },
+    Reddit: {
+        title: "Reddit",
+        content: ["Upvotes", "Subscribers", "Followers"],
+        isTwo: false,
+        inNav: false
+    },
+    Sitejabber: {
+        title: "Sitejabber",
+        content: [ "Reviews"],
+        isTwo: false,
+        inNav: false
+    },
+    Trustpilot: {
+        title: "Trustpilot",
+        content: ["Reviews"],
+        isTwo: false,
+        inNav: false
+    },
+    Tidal: {
+        title: "Tidal",
+        content: ["Followers", "Plays"],
+        isTwo: false,
+        inNav: false
+    },
+    IMDb: {
+        title: "IMDb",
+        content: ["Ratings", "Reviews"],
+        isTwo: false,
+        inNav: false
+    },
+    ReverbNation: {
+        title: "ReverbNation",
+        content: ["Plays", "Fans"],
+        isTwo: false,
+        inNav: false
+    },
+    Datpiff: {
+        title: "Datpiff",
+        content: ["Plays"],
+        isTwo: false,
+        inNav: false
+    },
+    Snapchat: {
+        title: "Snapchat",
+        content: ["Followers", "Story Views"],
+        isTwo: false,
+        inNav: false
+    },
+    Audiomack: {
+        title: "Audiomack",
+        content: ["Plays", "Likes", "Followers"],
+        isTwo: false,
+        inNav: false
+    },
+    Likee: {
+        title: "Likee",
+        content: ["Followers", "Likes", "Views"],
+        isTwo: false,
+        inNav: false
+    },
+    Tripadvisor: {
+        title: "Tripadvisor",
+        content: ["Reviews"],
+        isTwo: false,
+        inNav: false
+    },
+    Pandora: {
+        title: "Pandora",
+        content: ["Plays"],
+        isTwo: false,
+        inNav: false
+    },
+    Napster: {
+        title: "Napster",
+        content: ["Plays"],
+        isTwo: false,
+        inNav: false
     }
 }
 
 export const navTitles = ["instagram", "tiktok", "youtube","twitter", "facebook","spotify",
-                        "clubhouse", "discord", "linkedin", "twitch"]
+                        "clubhouse", "discord", "linkedin", "twitch", "Pinterest", "Podcast", "Rumble", "Mixcloud", "Soundcloud",
+                        "Vimeo", "Dailymotion", "VK", "Website", "Tumblr", "Telegram", "Shazam", "Quora",
+                        "Google", "iOS", "Reddit", "Sitejabber", "Trustpilot", "Tidal", "IMDb", "ReverbNation", "Datpiff", "Snapchat", "Audiomack",
+                        "Likee", "Tripadvisor", "Pandora", "Napster"]

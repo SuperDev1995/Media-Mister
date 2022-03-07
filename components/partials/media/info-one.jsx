@@ -1,10 +1,20 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Contents } from '~/contents/contents';
 
 import ALink from '~/components/features/alink';
 
 function InfoOne ( props ) {
-    const { product } = props;
+    const { product, pName, subPName } = props;
+    const contentArray = Contents[pName][subPName];
+
+    console.log(contentArray);
+
+    if(!contentArray || contentArray.length === 0)   {
+        return <h3>Service is unavailable</h3>
+    }
+
+    console.log("Info one = ", pName, subPName);
 
     const setRating = ( e ) => {
         e.preventDefault();
@@ -41,46 +51,90 @@ function InfoOne ( props ) {
                 <div className="tab-content">
                     <TabPanel className="tab-pane">
                         <div className="product-desc-content">
-                            <h3>Buy TikTok Comments</h3>
-                            <p className="pb-1">TikTok continues to go from strength to strength as the short video sharing platform of the moment. If looking to enhance the impact and appeal of your videos, why not buy TikTok comments online?</p>
-                            <br/>
-                            <h3>What Are TikTok Comments?</h3>
-                            {/* <ul>
-                                <li>Nunc nec porttitor turpis. In eu risus enim. In vitae mollis elit. </li>
-                                <li>Vivamus finibus vel mauris ut vehicula.</li>
-                                <li>Nullam a magna porttitor, dictum risus nec, faucibus sapien.</li>
-                            </ul> */}
-                            <p>TikTok comments are submitted by those who have watched your videos and have something to say. Comments can be left for any reason - praise, criticism, and general commentary. But what’s consistent with all comments is their appeal and influence over other TikTok users.When you come across a TikTok video with a bunch of comments, you’re instantly intrigued. If so many people have taken the time to comment, the video must be worth checking out. The same also goes for the publisher, along with the rest of their catalog of content.
-Or at least, that’s how it’s interpreted by almost every TikTok user worldwide. Comments never fail to get people talking and generate engagement. They’re also great for encouraging others to comment on your posts, keeping the conversation going. It’s just that with traditional organic comments, you could be waiting around for something that may never happen.</p>
+                            <h3>{contentArray[0].title}</h3>
+                            {
+                                contentArray[0].content.length !== 1 ?
+                                contentArray[0].content.map((item, idx) => <p key={idx}>{item}</p>)
+                                :
+                                contentArray[0].content[0].split('.').map((item, idx) => <p key={idx}>{item}</p>)
+                            }
+
+                            {
+                                contentArray[0].liContent &&
+                                <ul>
+                                    {
+                                        contentArray[0].liContent.map(item => <li>{item}</li>)
+                                    }
+                                </ul>
+                            }
+
+                            {
+                                contentArray[0].subContent && (contentArray[0].subContent.length !== 1 ?
+                                contentArray[0].subContent.map(item => <p>{item}</p>)
+                                :
+                                contentArray[0].subContent[0].split('.').map(item => <p>{item}</p>))
+                            }
+                            
+                            
                         </div>
                     </TabPanel>
 
                     <TabPanel className="tab-pane">
                         <div className="product-desc-content">
-                            <h3>Why Buy Comments on TikTok?</h3>
-                            <p>The alternative - and a surprisingly popular option - is to buy TikTok comments. In doing so, you get to control the content of the comments and get the conversation started. When you buy comments on TikTok, they can be used to send almost any message you like.
-You can say something positive about your content, say something controversial, or aim for something inspiring. You could ask a question, highlight something of interest in your video or respond to haters.
-With custom TikTok comments, anything is possible! It’s also worth remembering that comments have a direct effect on exposure and visibility on TikTok. The platform’s automated indexation system is programmed to promote and recommend content that’s relevant, popular, or trending.
-When videos generate discussion, they get picked up on and promoted by TikTok. Two major benefits from one simple promotional strategy, which also happens to be cheap, fast, and 100% safe.</p>
+                            
+                        <h3>{contentArray[1].title}</h3>
+                            {
+                                contentArray[1].content.length !== 1 ?
+                                contentArray[1].content.map((item, idx) => <p key={idx}>{item}</p>)
+                                :
+                                contentArray[1].content[0].split('.').map((item, idx) => <p key={idx}>{item}</p>)
+                            }
+
+                            {
+                                contentArray[1].liContent &&
+                                <ul>
+                                    {
+                                        contentArray[1].liContent.map(item => <li>{item}</li>)
+                                    }
+                                </ul>
+                            }
+
+                            {
+                                contentArray[1].subContent && (contentArray[1].subContent.length !== 1 ?
+                                contentArray[1].subContent.map(item => <p>{item}</p>)
+                                :
+                                contentArray[1].subContent[0].split('.').map(item => <p>{item}</p>))
+                            }
+                            
 
                         </div>
                     </TabPanel>
 
                     <TabPanel className="tab-pane">
                         <div className="product-desc-content">
-                            <h3>Why Buy TikTok Comments from Media Mister?</h3>
-                            <p>Because we understand and acknowledge the importance of quality, safety, and discretion, we exclusively sell 100% authentic TikTok comments, written and delivered by our own team of experts. Every comment is 100% relevant, 100% unique, and 100% indistinguishable from an organic comment.
-What’s more, we also offer the option of custom comments, enabling you to tailor the content of your comments personally. Just a few of our most popular packages of TikTok comments currently available include the following:</p>
-                            <ul>
-                                <li>10 TikTok comments delivered within 1-2 working days </li>
-                                <li>25 TikTok comments delivered within 1-3 working days</li>
-                                <li>50 TikTok comments delivered within 1-3 working days</li>
-                                <li>100 TikTok comments delivered within 2-4 working days</li>
-                                <li>250 TikTok comments delivered within 2-4 working days</li>
-                                <li>500 TikTok comments delivered within 4-7 working days</li>
-                                <li>1000 TikTok comments delivered within 7-12 working days</li>
-                            </ul>
-                            <p>Don’t forget - every purchase is covered by a full money-back guarantee for total peace of mind. Place your order online, or chat with our customer support team anytime for more information.</p>
+                        <h3>{contentArray[2].title}</h3>
+                            {
+                                contentArray[2].content.length !== 1 ?
+                                contentArray[2].content.map((item, idx) => <p key={idx}>{item}</p>)
+                                :
+                                contentArray[2].content[0].split('.').map((item, idx) => <p key={idx}>{item}</p>)
+                            }
+
+                            {
+                                contentArray[2].liContent &&
+                                <ul>
+                                    {
+                                        contentArray[2].liContent.map(item => <li>{item}</li>)
+                                    }
+                                </ul>
+                            }
+
+                            {
+                                contentArray[2].subContent && (contentArray[2].subContent.length !== 1 ?
+                                contentArray[2].subContent.map(item => <p>{item}</p>)
+                                :
+                                contentArray[2].subContent[0].split('.').map(item => <p>{item}</p>))
+                            }
                         </div>
                     </TabPanel>
 
